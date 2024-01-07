@@ -1,0 +1,74 @@
+
+
+.site-header {
+    padding: 21px 0 19px;
+}
+
+.header {
+    @include display()
+}
+
+.header__logo-link {
+    display: inline-block;
+}
+
+.header__navbar-wrapper {
+    @include display()
+}
+
+.header__navbar {
+    margin-right: 33px;
+}
+
+.navbar__list {
+    @include display()
+}
+
+.navbar__item + .navbar__item {
+    margin-left: 25px;
+}
+
+.navbar__link {
+    @include SiteText($FontSize: 13px, $LineHeight: normal);
+    letter-spacing: 1.5px;
+    transition: color 0.4s linear;
+
+    &:hover {
+        color: #2C2830;
+    }
+}
+
+.navbar__link2 {
+    @include Links();
+    transition: all 0.4s linear;
+
+    &:hover {
+        color: #FFF;
+        background: #2C2830;
+    }
+}
+.hamburger-btn {
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .navbar__item + .navbar__item {
+        margin-left: 20px;
+    }
+
+    .header__navbar {
+        margin-right: 25px;
+    }
+}
+
+@media (max-width: 665px) {
+    .header__navbar-wrapper {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+}

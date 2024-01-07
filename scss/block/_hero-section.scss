@@ -1,0 +1,42 @@
+.hero-section {
+    background-color: #2D2641;
+}
+
+.hero {
+    padding: 105px 0 127px;
+}
+
+.hero__content {
+    width: 540px;
+}
+
+.hero__line {
+    width: 150px;
+    height: 1px;
+    margin-bottom: 63px;
+    background-color: #fff;
+    display: inline-block;
+}
+
+.hero__title {
+    @include SiteTitle();
+    margin-bottom: 16px;
+}
+
+.hero__text {
+    @include SiteText($color: #fff, $FontWeight: 400);
+    margin-bottom: 24px;
+}
+
+.hero__link {
+    @include Links();
+    color: #fff;
+    display: inline-block;
+    border: 1.5px solid #FFF;
+    transition: all 0.4s linear;
+
+    &:hover {
+        color: #2C2830;
+        background-color: #fff;
+    }
+}
